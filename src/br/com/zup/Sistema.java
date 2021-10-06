@@ -1,5 +1,6 @@
 package br.com.zup;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Sistema {
@@ -12,7 +13,8 @@ public class Sistema {
         System.out.println("Bem vinde a Space Negócios *-*");
         System.out.println("Digite 1 para cadastrar um novo consumidor.");
         System.out.println("Digite 2 para cadastrar uma nova fatura.");
-        System.out.println("Digite 3 para sair do sistema.");
+        System.out.println("Digite 3 para consultar faturas de um consumidor.");
+        System.out.println("Digite 4 para sair do sistema.");
     }
 
     public static Consumidor cadastrarConsumidor() throws Exception {
@@ -27,5 +29,11 @@ public class Sistema {
         String dataDeVencimento = receberDados("Informe a data de vencimento da fatura:").nextLine();
 
         return ServiceFatura.cadastrarFatura(email, valorDaFatura, dataDeVencimento);
+    }
+
+    public static List<Fatura> pesquisarFaturas() {
+        String email = receberDados("Informe o email do consumidor:").nextLine();
+        List<Fatura> faturasDoUsuario = ServiceFatura.pesquisarFaturaPorEmail(email);
+        return faturasDoUsuario;
     }
 }

@@ -19,6 +19,7 @@ public class ServiceConsumidor {
             }
         }
     }
+
     public static Consumidor cadastrarConsumidor(String nome, String email) throws Exception {
         validarEmail(email);
         Consumidor consumidor = new Consumidor(nome, email);
