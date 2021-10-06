@@ -20,4 +20,10 @@ public class ServiceConsumidor {
         }
         throw new Exception("Consumidor não cadastrado no sistema.");
     }
+
+    public static void validarEmail(String email) throws Exception {
+        if (!email.contains("@")) {
+            throw new Exception("Informe um email válido!");
+        }
+    }
 }
