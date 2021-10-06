@@ -1,6 +1,13 @@
 package br.com.zup;
 
+import java.util.Scanner;
+
 public class Sistema {
+    private static Scanner receberDados(String mensagem) {
+        System.out.println(mensagem);
+        return new Scanner(System.in);
+    }
+
     public static void menu(){
         System.out.println("Bem vinde a Space Negócios *-*");
         System.out.println("Digite 1 para cadastrar um novo consumidor.");
