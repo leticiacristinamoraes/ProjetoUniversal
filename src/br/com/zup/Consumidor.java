@@ -4,7 +4,7 @@ public class Consumidor {
     private String nome;
     private String email;
 
-    public Consumidor(){
+    public Consumidor() {
 
     }
 
@@ -27,5 +27,13 @@ public class Consumidor {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("Nome do consumidor: " + nome);
+        retorno.append("Email do consumidor: " + email);
+        return retorno.toString();
     }
 }
