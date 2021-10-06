@@ -5,4 +5,5 @@ import java.util.List;
 
 public class ServiceFatura {
     private static List<Fatura> faturas = new ArrayList<>();
+
 }
