@@ -38,9 +38,10 @@ public class Fatura {
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("Consumidor: " + consumidor);
-        retorno.append("Valor da fatura: R$ " + valorDaFatura);
-        retorno.append("A data de vencimento da fatura é: " + dataDeVencimento);
+        retorno.append("\n Detalhes da fatura:\n");
+        retorno.append("\n Consumidor: " + consumidor);
+        retorno.append("\n Valor da fatura: R$ " + valorDaFatura);
+        retorno.append("\n A data de vencimento da fatura é: " + dataDeVencimento);
         return retorno.toString();
     }
 }
