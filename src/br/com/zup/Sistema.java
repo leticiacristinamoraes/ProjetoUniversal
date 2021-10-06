@@ -31,8 +31,9 @@ public class Sistema {
         return ServiceFatura.cadastrarFatura(email, valorDaFatura, dataDeVencimento);
     }
 
-    public static List<Fatura> pesquisarFaturas() {
+    public static List<Fatura> pesquisarFaturas() throws Exception {
         String email = receberDados("Informe o email do consumidor:").nextLine();
+        ServiceConsumidor.validarEmail(email);
         List<Fatura> faturasDoUsuario = ServiceFatura.pesquisarFaturaPorEmail(email);
         return faturasDoUsuario;
     }
