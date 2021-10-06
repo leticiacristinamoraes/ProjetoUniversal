@@ -14,4 +14,10 @@ public class Sistema {
         System.out.println("Digite 2 para cadastrar uma nova fatura.");
         System.out.println("Digite 3 para sair do sistema.");
     }
+
+    public static Consumidor cadastrarConsumidor(){
+        String nome = receberDados("Informe o nome do consumidor:").nextLine();
+        String email = receberDados("Informe o email do consumidor:").nextLine();
+        return ServiceConsumidor.cadastrarConsumidor(nome, email);
+    }
 }
