@@ -13,8 +13,8 @@ public class ServiceConsumidor {
     }
 
     public static void verificarExistenciaDoEmail(String email) throws Exception {
-        for (Consumidor consumidorDeReferncia: consumidores) {
-            if (consumidorDeReferncia.getEmail().equals(email)){
+        for (Consumidor consumidorDeReferncia : consumidores) {
+            if (consumidorDeReferncia.getEmail().equals(email)) {
                 throw new Exception("Este email já foi cadastrado!");
             }
         }
@@ -35,6 +35,5 @@ public class ServiceConsumidor {
         }
         throw new Exception("Consumidor não cadastrado no sistema.");
     }
-
 
 }

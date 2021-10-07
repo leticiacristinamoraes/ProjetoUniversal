@@ -38,12 +38,12 @@ public class Sistema {
         return faturasDoUsuario;
     }
 
-    public static void executar() throws Exception {
+    public static boolean executar() throws Exception {
         boolean continuar = true;
 
         while (continuar) {
             menu();
-            int opcaoDesejada = receberDados("Digite a ooção desejada:").nextInt();
+            int opcaoDesejada = receberDados("Digite a opção desejada:").nextInt();
             if (opcaoDesejada == 1) {
                 Consumidor consumidor = cadastrarConsumidor();
                 System.out.println(consumidor);
@@ -60,5 +60,6 @@ public class Sistema {
                 System.out.println("Por favor, digite uma opção válida!");
             }
         }
+        return continuar;
     }
 }
