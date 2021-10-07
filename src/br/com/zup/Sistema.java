@@ -38,15 +38,27 @@ public class Sistema {
         return faturasDoUsuario;
     }
 
-    public static void executar(){
-       boolean continuar = true;
+    public static void executar() throws Exception {
+        boolean continuar = true;
 
-       while (continuar) {
-           menu();
-           int opcaoDesejada = receberDados("Digite a ooção desejada:").nextInt();
-           if (opcaoDesejada == 1) {
-
-           }
-       }
+        while (continuar) {
+            menu();
+            int opcaoDesejada = receberDados("Digite a ooção desejada:").nextInt();
+            if (opcaoDesejada == 1) {
+                Consumidor consumidor = cadastrarConsumidor();
+                System.out.println(consumidor);
+            } else if (opcaoDesejada == 2) {
+                Fatura fatura = cadastrarFatura();
+                System.out.println(fatura);
+            } else if (opcaoDesejada == 3) {
+                List<Fatura> faturas = pesquisarFaturas();
+                System.out.println(faturas);
+            } else if (opcaoDesejada == 4) {
+                continuar = false;
+                System.out.println("Obrigada por utilizar nosso sistema. Volte sempre! :)");
+            } else {
+                System.out.println("Por favor, digite uma opção válida!");
+            }
+        }
     }
 }
