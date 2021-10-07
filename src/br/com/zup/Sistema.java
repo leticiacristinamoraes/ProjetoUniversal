@@ -37,4 +37,16 @@ public class Sistema {
         List<Fatura> faturasDoUsuario = ServiceFatura.pesquisarFaturaPorEmail(email);
         return faturasDoUsuario;
     }
+
+    public static void executar(){
+       boolean continuar = true;
+
+       while (continuar) {
+           menu();
+           int opcaoDesejada = receberDados("Digite a ooção desejada:").nextInt();
+           if (opcaoDesejada == 1) {
+
+           }
+       }
+    }
 }
